@@ -1,0 +1,19 @@
+---
+- hosts: palo
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: testacl-ping
+      panos_security_rule:
+        ip_address: "10.44.229.102"
+        password: "Palopassword01"
+        username: "admin"
+        operation: 'create'
+        rule_name: 'testACL'
+        source_zone: ['vlan2']
+        destination_zone: ['vlan3']
+        vsys: 'vsys1'
+        source_ip: ['192.168.2.1']
+        destination_ip: ['192.168.3.1']
+        application: ['any']
+        commit: 'yes'
