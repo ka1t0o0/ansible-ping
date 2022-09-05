@@ -1,9 +1,8 @@
 ---
-- hosts: palo
- connection: local
- gather_facts: no
-
-
+- hosts: all
+  connection: local
+  gather_facts: no
+ 
  tasks:
    - name: Test reachability to another switch using default vrf
      cisco.io.ios_ping:
