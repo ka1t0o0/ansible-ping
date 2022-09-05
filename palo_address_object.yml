@@ -4,7 +4,7 @@
   gather_facts: no
   tasks:
     - name: Create object 'Test-One'
-      panos_address_object:
+      paloaltonetworks.panos.panos_address_object:
         provider: '{{ provider }}'
         name: 'Test-One'
         value: '1.1.1.1'
