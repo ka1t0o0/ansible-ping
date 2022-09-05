@@ -1,6 +1,6 @@
 ---
 - connection: local
-  gather_facts: no
+  gather_facts: false
   tasks:
     - name: testacl-ping
       paloaltonetworks.panos.panos_security_rule:
