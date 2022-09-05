@@ -1,6 +1,5 @@
 ---
-- hosts: palo
-  connection: local
+- connection: local
   gather_facts: no
   tasks:
     - name: testacl-ping
