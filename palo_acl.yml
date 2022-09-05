@@ -4,7 +4,8 @@
   gather_facts: no
   tasks:
     - name: testacl-ping
-      panos_security_rule:
+      paloaltonetworks.panos.panos_security_rule:
+        provider: '{{ provider }}'
         ip_address: "10.44.229.102"
         password: "Palopassword01"
         username: "admin"
