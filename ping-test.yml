@@ -1,3 +1,0 @@
-- name: Test reachability to another switch using default vrf
-cisco.io.ios_ping:
-   dest: 192.168.3.1
