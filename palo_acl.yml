@@ -1,0 +1,21 @@
+---
+- hosts: palo
+ connection: local
+ gather_facts: no
+
+
+ tasks:
+   - name: testacl-v2
+     panos_security_rule:
+      ip_address: "10.247.57.70"
+      password: "Palopalo0622"
+      username: "kaito"
+      operation: 'update'
+      rule_name: 'test'
+      source_zone: ['SMBC_03_Trust']
+      destination_zone: ['MSCloud_Untrust']
+      vsys: 'vsys3'
+      source_ip: ['BBS014']
+      destination_ip: ['10.248.177.224']
+      application: ['any']
+      commit: 'no'
