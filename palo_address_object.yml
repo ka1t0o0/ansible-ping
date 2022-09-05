@@ -1,8 +1,7 @@
 ---
 - hosts: all
-  connection: local
-  gather_facts: no
-  tasks:
+  gather_facts: false
+  roles:
     - name: Create object 'Test-One'
       paloaltonetworks.panos.panos_address_object:
         provider: '{{ provider }}'
