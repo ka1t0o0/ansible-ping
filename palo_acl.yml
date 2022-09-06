@@ -7,7 +7,7 @@
         ip_address: "10.44.229.102"
         password: "Palopassword01"
         username: "admin"
-        operation: 'create'
+        state: 'absent'
         rule_name: 'testACL'
         source_zone: ['vlan2']
         destination_zone: ['vlan3']
