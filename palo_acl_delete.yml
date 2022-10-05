@@ -6,13 +6,13 @@
   tasks:
     - name: testacl-delete
       paloaltonetworks.panos.panos_security_rule:
-        ip_address: "10.44.229.102"
+        ip_address: ""
         password: "Palopassword01"
         username: "admin"
         state: 'deleted'
         rule_name: 'testACL'
         source_zone: ['vlan2']
         destination_zone: ['vlan3']
-        source_ip: ['192.168.200.1']
-        destination_ip: ['192.168.30.1']
+        source_ip: ['']
+        destination_ip: ['']
         application: ['any']
